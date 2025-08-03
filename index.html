@@ -3,13 +3,21 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>카카오 링크 보내기</title>
 <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.5/kakao.min.js" integrity="sha384-dok87au0gKqJdxs7msEdBPNnKSRT+/mhTVzq+qOhcL464zXwvcrpjeWvyj1kCdq6" crossorigin="anonymous"></script>
+
+<script>
+// SDK를 초기화 합니다. 사용할 앱의 JavaScript 키를 설정해야 합니다.
+Kakao.init('9e29f89832481fc3053095873a9a4994');
+
+// SDK 초기화 여부를 판단합니다.
+console.log(Kakao.isInitialized());
+</script>
+
 </head>
 <body>
-    <input type="button" onClick="sendLinkCustom();" value="sendCustom"/>
+    <input type="button" onClick="sendLinkCustom();" value="sendCustom111"/>
 
 <script type="text/javascript">
     function sendLinkCustom() { //CASE1. '사용자 정의 메세지' 보내기
-        Kakao.init('9e29f89832481fc3053095873a9a4994'); //문자열 형태로 입력
         Kakao.Share.createCustomButton({
           container: '#kakaotalk-share-btn',
           templateId: 123079,
