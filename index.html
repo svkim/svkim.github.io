@@ -14,12 +14,11 @@ console.log(Kakao.isInitialized());
 
 </head>
 <body>
-    <input type="button" onClick="sendLinkCustom();" value="sendCustom111"/>
+    <input type="button" onClick="sendLinkCustom();" value="sendCustom112"/>
 
 <script type="text/javascript">
     function sendLinkCustom() { //CASE1. '사용자 정의 메세지' 보내기
-        Kakao.Share.createCustomButton({
-          container: '#kakaotalk-share-btn',
+        Kakao.Share.sendCustom({
           templateId: 123079,
           templateArgs: {
             title: '제목 영역입니다.',
