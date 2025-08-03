@@ -1,114 +1,20 @@
-<!DOCTYPE html>
-<html lang="ko">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>우리의 결혼을 축하해주세요</title>
-    <style>
-        body {
-            font-family: 'Nanum Myeongjo', serif;
-            background-color: #fff9f9;
-            color: #555;
-            line-height: 1.8;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-        
-        .invitation {
-            max-width: 600px;
-            margin: 30px auto;
-            padding: 40px;
-            background-color: white;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
-            border-radius: 10px;
-        }
-        
-        h1 {
-            color: #d4a373;
-            font-size: 28px;
-            margin-bottom: 30px;
-        }
-        
-        .names {
-            font-size: 24px;
-            margin: 30px 0;
-            color: #d4a373;
-            font-weight: bold;
-        }
-        
-        .date, .location {
-            margin: 20px 0;
-            font-size: 18px;
-        }
-        
-        .separator {
-            width: 100px;
-            height: 1px;
-            background-color: #ddd;
-            margin: 30px auto;
-        }
-        
-        .note {
-            font-size: 16px;
-            margin: 30px 0;
-            line-height: 1.6;
-        }
-        
-        .footer {
-            margin-top: 40px;
-            font-size: 14px;
-            color: #999;
-        }
-        
-        .flower {
-            font-size: 24px;
-            margin: 20px 0;
-            color: #d4a373;
-        }
-    </style>
-    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&display=swap" rel="stylesheet">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>카카오 링크 보내기</title>
+<script type="text/JavaScript" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
 </head>
 <body>
-    <div class="invitation">
-        <h1>결혼합니다</h1>
-        
-        <div class="flower">✿</div>
-        
-        <div class="names">
-            홍길동 · 홍길순
-        </div>
-        
-        <div class="flower">✿</div>
-        
-        <div class="date">
-            2023년 10월 15일 일요일 오후 2시
-        </div>
-        
-        <div class="location">
-            서울 그랜드힐튼호텔 3층 크리스탈볼룸
-        </div>
-        
-        <div class="separator"></div>
-        
-        <div class="note">
-            서로를 존경하고 사랑하는 두 사람이<br>
-            이제 한 가족이 되려 합니다.<br>
-            바쁘시더라도 참석하시어<br>
-            저희의 새로운 출발을 축복해 주시면<br>
-            큰 기쁨으로 간직하겠습니다.
-        </div>
-        
-        <div class="separator"></div>
-        
-        <div class="note">
-            혼주 : 홍판서 · 김부인<br>
-            010-1234-5678 · 010-9876-5432
-        </div>
-        
-        <div class="footer">
-            * 코로나19 예방을 위해 마스크 착용 부탁드립니다.
-        </div>
-    </div>
+    <input type="button" onClick="sendLinkCustom();" value="sendCustom"/>
+
+<script type="text/javascript">
+    function sendLinkCustom() { //CASE1. '사용자 정의 메세지' 보내기
+        Kakao.init('9e29f89832481fc3053095873a9a4994'); //문자열 형태로 입력
+        Kakao.Link.sendCustom({
+            templateId: "123079" //숫자 형태로 입력
+        });
+    }
+</script>
+
 </body>
 </html>
